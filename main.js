@@ -1,3 +1,30 @@
+// NAV BAR
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+            navLinks.classList.remove('show');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target) && navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show');
+        }
+    });
+});
+
+// FEATURED
+
 const headings = [
     `"Just look at how much that you have grown.<br>You're far from what you've known."`,
     `"Now this place mourns in gloom where we used to pour our hearts,<br>where flowers used to bloom."`,
