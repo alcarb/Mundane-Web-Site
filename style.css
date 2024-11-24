@@ -82,7 +82,7 @@ nav {
 /* FEATURED */
 
 .featured {
-  background-image: url("images/band photo-wfutb-empty.png");
+  background-image: url("images/band photo-wfutb-empty.png") !important;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
